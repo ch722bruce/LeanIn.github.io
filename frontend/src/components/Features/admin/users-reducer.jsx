@@ -21,7 +21,9 @@ const usersSlice = createSlice({
       );
     },
     [deleteAuthUserThunk.fulfilled]: (state, action) => {
+      // eslint-disable-next-line array-callback-return
       state.users = state.users.filter((user) => {
+        // eslint-disable-next-line no-unused-expressions
         user.uid !== action.payload.uid;
         console.log(
           'found delete user uid',

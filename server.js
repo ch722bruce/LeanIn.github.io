@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const admin = require("firebase-admin");
+// eslint-disable-next-line import/no-unresolved
 const { getFirestore } = require("firebase-admin/firestore");
 const credentials = require("./serviceAccountKey.json");
 
@@ -36,5 +37,6 @@ app.use("/", (req, res) => {
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
+  // eslint-disable-next-line no-console
   console.log(`Server is running on port !${PORT}.`);
 });

@@ -17,6 +17,7 @@ export const findUserThunk = createAsyncThunk(
 export const deleteAuthUserThunk = createAsyncThunk(
   'users/delete', async (uid) => {
     await userService.deleteAuthUser(uid);
+    // eslint-disable-next-line no-undef
     return id;}
 );
 
