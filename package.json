@@ -28,6 +28,7 @@
     "frontend": "cd frontend && npm run start",
     "backend": "nodemon server.js",
     "build": "npm install && cd frontend && npm install",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
